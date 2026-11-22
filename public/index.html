@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TypeScript Chat</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/assets/client.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div><p class="eyebrow">TypeScript Project</p><h1>Chat Room</h1></div>
+      <span id="status" role="status">Connecting...</span>
+    </header>
+    <section id="join-panel" class="join-panel" aria-label="Join the chat">
+      <h2>Join the conversation</h2>
+      <p>Enter a name to start chatting.</p>
+      <form id="name-form">
+        <label for="name">Your name</label>
+        <div class="form-row"><input id="name" name="name" maxlength="24" required autocomplete="nickname" placeholder="e.g. Kheen"><button type="submit">Join chat</button></div>
+      </form>
+    </section>
+    <section id="chat-panel" class="chat-grid" hidden aria-label="Chat room">
+      <aside class="online-panel"><h2>Online users</h2><p id="user-count">0 online</p><ul id="users"></ul></aside>
+      <section class="messages-panel" aria-label="Messages">
+        <ol id="messages" aria-live="polite"></ol>
+        <form id="message-form" class="message-form">
+          <label for="message">Message</label>
+          <div class="form-row"><input id="message" name="message" maxlength="500" required autocomplete="off" placeholder="Type a message..."><button type="submit">Send</button></div>
+        </form>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

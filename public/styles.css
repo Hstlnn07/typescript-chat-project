@@ -1,0 +1,30 @@
+:root { font-family: Arial, Helvetica, sans-serif; color: #182638; background: #eef2f6; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 28px; }
+.shell { max-width: 950px; margin: 0 auto; background: white; border: 1px solid #dce3eb; border-radius: 10px; overflow: hidden; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 24px; border-bottom: 1px solid #e3e8ee; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 0; font-size: 24px; }
+h2 { font-size: 17px; }
+.eyebrow { margin-bottom: 4px; color: #62758b; font-size: 12px; }
+#status { font-size: 13px; color: #3e6873; }
+.join-panel { max-width: 520px; padding: 36px 24px 45px; margin: 0 auto; }
+.join-panel p, #user-count { color: #657386; }
+label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 600; }
+.form-row { display: flex; gap: 8px; }
+input { flex: 1; min-width: 0; padding: 11px 12px; border: 1px solid #c9d3dd; border-radius: 6px; font: inherit; }
+button { border: 0; border-radius: 6px; padding: 10px 16px; color: white; background: #245e91; font: inherit; cursor: pointer; }
+button:hover { background: #194b78; }
+.chat-grid { display: grid; grid-template-columns: 230px minmax(0, 1fr); min-height: 490px; }
+[hidden] { display: none !important; }
+.online-panel { border-right: 1px solid #e3e8ee; padding: 24px; background: #fafbfd; }
+.online-panel ul { list-style: none; padding: 0; line-height: 2; overflow-wrap: anywhere; }
+.messages-panel { display: flex; flex-direction: column; min-width: 0; }
+#messages { flex: 1; height: 380px; overflow-y: auto; list-style: none; margin: 0; padding: 20px 24px; }
+.message { margin-bottom: 16px; }
+.message .details { display: flex; gap: 12px; align-items: baseline; }
+.message time { color: #7c8897; font-size: 12px; }
+.message p { margin: 5px 0 0; line-height: 1.45; overflow-wrap: anywhere; }
+.notice { color: #69798c; text-align: center; font-size: 13px; margin: 14px 0; }
+.message-form { border-top: 1px solid #e3e8ee; padding: 16px 24px 20px; }
+@media (max-width: 620px) { body { padding: 10px; } .chat-grid { grid-template-columns: 1fr; } .online-panel { border-right: 0; border-bottom: 1px solid #e3e8ee; padding: 12px 20px; } .online-panel ul { margin-bottom: 0; } #messages { height: 350px; } }
